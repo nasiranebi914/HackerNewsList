@@ -19,7 +19,6 @@ function ListOfNews() {
         axios.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
             .then(function (res) {
                 const first100data: string[] = res.data.slice(0, 100);
-                setStoriesItems([]);
                 first100data.length > 0 && first100data.map((item: string) => {
                     axios.get('https://hacker-news.firebaseio.com/v0/item/' + item + '.json?print=pretty')
                         .then(function (res) {
@@ -43,6 +42,7 @@ function ListOfNews() {
             });
 
     }, []);
+    console.log(storiesItems)
     return (
         <div className='listOfNews'>
             {

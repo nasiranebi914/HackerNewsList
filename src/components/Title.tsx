@@ -1,6 +1,4 @@
-import { type } from "@testing-library/user-event/dist/type";
 import React from "react";
-import { BiNews } from "react-icons/bi";
 import { HiOutlineQrcode } from "react-icons/hi"
 
 function Title() {

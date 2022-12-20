@@ -22,19 +22,19 @@ function Pagination({ totalPages, currentPage, setCurrentPage }: IPagination) {
                 <ul className='paginationLink'>
                     {currentPage === 1 ? ' ' :
                         <li className='paginationPN'>
-                            <a onClick={prevPage} href='#'><GrPrevious /></a>
+                            <a onClick={prevPage} href="#"><GrPrevious /></a>
                         </li>
                     }
 
                     {pageNumbers.map(number => (
                         <li key={number} >
-                            <a href='#' className={currentPage === number ? 'active' : ''} onClick={() => setCurrentPage(number)}>{number}</a>
+                            <a href="#" className={currentPage === number ? 'active' : ''} onClick={() => setCurrentPage(number)}>{number}</a>
                         </li>
                     ))}
 
                     {currentPage === 10 ? ' ' :
                         <li className='paginationPN'>
-                            <a onClick={nextPage} href='#'><GrNext /></a>
+                            <a onClick={nextPage} href="#"><GrNext /></a>
                         </li>
                     }
 

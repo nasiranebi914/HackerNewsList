@@ -5,10 +5,10 @@ import { IData } from "../constants/DataInterface";
 function News({ title, author, url, time }: IData) {
     return (
         <div className='news'>
-            <a className='newsTitle' href={url} target='_blank'>{title}</a>
+            <a className='newsTitle' href={url} target='_blank' rel="noopener noreferrer">{title}</a>
             <div className='authorLink'>
                 <p>by {author},&nbsp;{time}</p>
-                <a href={url} target='_blank'><BiLinkExternal /></a>
+                <a href={url} target='_blank' rel="noopener noreferrer"><BiLinkExternal /></a>
             </div>
         </div>
     )
